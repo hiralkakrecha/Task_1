@@ -1,0 +1,22 @@
+<html>
+<body>
+<div>
+    <h1> Tech Manager </h1>
+    <h3> Hello Blog</h3>
+    <table border="5">
+        <tr>
+            <th> Blog Image</th>
+            <th> Blog Link</th>
+            <th> Blog Content</th>
+        </tr> 
+        {% for data in blog_data %} 
+        <tr>
+            <td> <img src="/media/{{MEDIA_URL}}{{data.blog_image}}" style="height:50px; width:50px"></td>
+            <td> {{data.blog_link}}</td>
+            <td> {{data.blog_content}}</td>
+        </tr>  
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
